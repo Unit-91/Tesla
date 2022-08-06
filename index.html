@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Tesla</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/style.css">
+	<!-- <meta name="robots" content="noindex, nofollow" /> -->
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+</head>
+<body> 
+    <main class="wrapper">
+        <div class="loader">
+            <div class="loader__container">
+                <div class="shadow"></div>
+                <div class="box"></div>
+            </div>
+        </div>
+        <style>
+            .loader {
+                z-index: 20;
+                position: fixed;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #fff; 
+                width: 100%;
+                height: 100vh;
+                top: 0;
+                left: 0;
+                transition: 0.5s;
+            }
+            .loader.hiden {
+                opacity: 0;
+                visibility: hidden;
+            }
+            .loader__container {
+                position: relative;
+                width: 100px;
+                height: 100px;
+            }
+        
+            .box {
+                width: 50px;
+                height: 50px;
+                background: #E51937;
+                animation: animate .5s linear infinite;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 3px;
+            }
+            @keyframes animate {
+                17% { border-bottom-right-radius: 3px; }
+                25% { transform: translateY(9px) rotate(22.5deg); }
+                50% {
+                    transform: translateY(18px) scale(1,.9) rotate(45deg) ;
+                    border-bottom-right-radius: 40px;
+                }
+                75% { transform: translateY(9px) rotate(67.5deg); }
+                100% { transform: translateY(0) rotate(90deg); }
+            } 
+        
+            .shadow { 
+                width: 50px;
+                height: 5px;
+                background: #000;
+                opacity: 0.2;
+                position: absolute;
+                top: 59px;
+                left: 0;
+                border-radius: 50%;
+                animation: shadow .5s linear infinite;
+            }
+            @keyframes shadow {50% {transform: scale(1.3,1);}}
+        </style>
+        <script>
+            let loader = document.querySelector('.loader')
+        
+            window.onload = function() {
+                setTimeout(() => {
+                    loader.classList.add('hiden')
+                }, 500);
+            }
+        </script>
+        <header class="header">
+            <div class="container">
+                <div class="header__row">
+                    <a class="header__logo"><img src="build/img/icons/logo.svg" alt=""></a>
+                    <nav class="header__menu">
+                        <ul class="header__menu-links">
+                            <li class="header__menu-link active"><a href="#">Model S</a></li>
+                            <li class="header__menu-link"><a href="#">Model X</a></li>
+                            <li class="header__menu-link"><a href="#">Model 3</a></li>
+                            <li class="header__menu-link"><a href="#">Roadster</a></li>
+                            <li class="header__menu-link"><a href="#">Energy</a></li>
+                        </ul>
+                        <ul class="header__menu-links-2">
+                            <li class="header__menu-link"><a href="">Магазин</a></li>
+                            <li class="header__menu-link"><a href="">Войти</a></li>
+                            <div class="header__burger"><img src="build/img/icons/burger.svg" alt=""></div>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <section class="tesla">
+            <h1 class="tesla__title">Model S</h1>
+            <p class="tesla__subtitle">Добро пожаловать в будущее!</p>
+            <div class="tesla__img">
+                <img class="tesla__img-text" src="build/img/tesla-bg-text.svg" alt="">
+                <img class="tesla__img-car" src="build/img/tesla-car.svg" alt="">
+            </div>
+            <div class="tesla__info">
+                <div class="tesla__info-column">
+                    <div class="tesla__overclock">
+                        <span>2,7<sup>сек</sup></span>
+                        <p>0-100 км/час</p>
+                    </div>
+                    <div class="tesla__power-reserve">
+                        <span>632<sup>км</sup></span>
+                        <p>запас хода</p>
+                    </div>
+                </div>
+                <div class="tesla__info-column">
+                    <span class="tesla__test-drive">ТЕСТ ДРАЙВ</span>
+                    <a class="tesla__order-btn" hre="#">ЗАКАЗАТЬ</a>
+                </div>
+            </div>
+            <div class="tesla__down"><button class="tesla__down-btn"></button></div>
+        </section>
+        <section class="cabin">
+            <div class="cabin__row">
+                <div class="cabin__img"></div>
+                <div class="cabin__text">
+                    <div class="cabin__characters">
+                        <div class="cabin__roominess">
+                            <h4 class="cabin__roominess-title title">Будущее вождения</h4>
+                            <p class="cabin__roominess-text text">Модель S обладает лучшей в своем классе вместимостью: в машине поместится до пяти взрослых и двух детей. Оснащена современным 17-дюймовым сенсорным экраном. Усовершенствованная шумовая инженерия создает динамику звука, сравнимую со студией звукозаписи, а стеклянная крыша обеспечивает просторный интерьер для каждого пассажира.</p>
+                        </div>
+                        <div class="cabin__performance">
+                            <div class="cabin__display">
+                                <span>17<sup>дюймов</sup></span>
+                                <p>Большой дисплей</p>
+                            </div>
+                            <div class="cabin__renewal">
+                                <h5>Беспроводное обновление ПО</h5>
+                                <p>Повышенная функциональность</p>
+                            </div>
+                            <div class="cabin__capacity">
+                                <span>894<sup>литра</sup></span>
+                                <p>Объем грузового пространства</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cabin__order order">
+                        <a href="#" class="cabin__learn-more learn-more">УЗНАТЬ БОЛЬШЕ</a>
+                        <button class="cabin__order-btn order-btn">ЗАКАЗАТЬ</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer__row">
+                <div class="footer__text">
+                    <div class="footer__protection">
+                        <div class="footer__the-safest">
+                            <h4 class="footer__protection-title title">Самый безопасный автомобиль в мире</h4>
+                            <p class="footer__protection-text text">Модель S достигла наивысшей оценки безопасности любого автомобиля, когда-либо испытанного, и установила рекорд по наименьшей вероятности травмы пассажиров - от несчастных случаев на переднем, боковом, заднем сидении и в ДТП с переворотом авто.</p>
+                        </div>
+                        <div class="footer__rating">
+                            <h4 class="footer__rating-title">Оценка защиты:</h4>
+                            <div class="footer__rating-row">
+                                <div class="footer__rating-lines">
+                                    <h5 class="footer__rating-line">СПЕРЕДИ</h5>
+                                    <h5 class="footer__rating-line">СБОКУ</h5>
+                                    <h5 class="footer__rating-line">СБОКУ<span>(стойка)</span></h5>
+                                    <h5 class="footer__rating-line">ВОДИТЕЛЬ</h5>
+                                    <h5 class="footer__rating-line">ПАССАЖИР</h5>
+                                </div>
+                                <div class="footer__rating-stars">
+                                    <div class="footer__stars-line">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="footer__stars-line">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="footer__stars-line">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="footer__stars-line">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                    </div>
+                                    <div class="footer__stars-line">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                        <img src="build/img/icons/star.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer__five">
+                            <h3 class="footer__five-title">5 звезд</h3>
+                            <h4 class="footer__five-subtitle">безопасности</h4>
+                        </div>
+                    </div>
+                    <div class="footer__order">
+                        <a href="#" class="footer__learn-more learn-more">УЗНАТЬ БОЛЬШЕ</a>
+                        <button class="footer__order-btn order-btn">ЗАКАЗАТЬ</button>
+                    </div>
+                </div>
+                <div class="footer__img">
+                    <span class="footer__front-protection protection">Защита от удара спереди</span>
+                    <span class="footer__side-protection protection">Защита от удара сбоку</span>
+                    <span class="footer__minimal-risk protection">Минимальный риск перевернуться в аварии</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="build/js/main.js"></script>
+</body>
+</html>

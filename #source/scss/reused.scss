@@ -1,0 +1,70 @@
+.red-block {
+    
+}
+
+.title {
+    max-width: 316px;
+    font-weight: 600;
+    font-size: 30px;
+    @media(max-width: 1195px) {max-width: 100%;}
+    @media(max-width: 350px) {line-height: 1.2em;}
+    @include adaptive-value("font-size", 30, 24, 375, 320);
+}
+
+.text {
+    max-width: 316px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    @media(max-width: 1195px) {max-width: 100%;}
+}
+
+.order {}
+
+.learn-more {
+    position: relative;
+    font-weight: bold;
+    font-size: 13px;
+    color: #FFFFFF;
+    margin-right: 32px;
+    @media(max-width: 1195px) {
+        margin-right: 44px;
+        font-size: 16px;
+    }
+    &:before {
+        position: absolute;
+        content: '';
+        top: -4px;
+        left: -5px;
+        width: 22px;
+        height: 22px;
+        background-image: url('../img/icons/more.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        @media(max-width: 1195px) {left: 10px;}
+    }
+}
+
+.order-btn {
+    padding: 10px 40px;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 13px;
+    color: #FFFFFF;
+    background-color: transparent;
+    border: 2px solid #FFFFFF;
+    @media(max-width: 1195px) {
+        padding: 15px 62px;
+        font-size: 16px;
+        border: 3px solid #FFFFFF;
+    }
+}
+
+.protection {
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 0.94em;
+    @include adaptive-value("font-size", 17, 15, 1195, 768);
+    @include adaptive-value("font-size", 15, 7, 768, 375);
+    @media(max-width: 375px) {font-size: 7px;}
+}

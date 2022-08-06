@@ -1,0 +1,97 @@
+.header {
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+    padding: 24px 60px 24px 42px;
+    margin-bottom: 44px;
+    @media(max-width: 1200px) {padding: 24px 33px 24px 15px;}
+    @media(max-width: 1024px) {margin-bottom: 8.7%;}
+    @media(max-width: 554px) {
+        padding: 19px 21px 24px 2px;
+        margin-bottom: 3.3%;
+    }
+
+    &__row {
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        cursor: pointer;
+        height: 51px;
+        @media(max-width: 554px) {height: 42px;}
+        & img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+
+    &__menu {
+        max-width: 925px;
+        @include adaptive-value("max-width", 925, 800, 1440, 1200);
+        @include adaptive-value("max-width", 830, 730, 1200, 1024);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @media(max-width: 1024px) {justify-content: flex-end;}
+
+        &-links {
+            max-width: 513px;
+            @include adaptive-value("max-width", 513, 450, 1440, 980);
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            &-2 {
+                max-width: 215px;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                @media(max-width: 1024px) {justify-content: flex-end;}
+            }
+        }
+
+        &-link {
+            position: relative;
+            padding: 7px 12px;
+            @media(max-width: 1024px) {display: none;}
+            & a {
+                font-weight: 600;
+                font-size: 15px;
+                color: #000000;
+            }
+            &.active {
+                & a {color: #E51937;}
+                &:before {
+                    position: absolute;
+                    content: '';
+                    background: url('../img/icons/menu-active.svg');
+                    background-size: 100% 100%;
+                    bottom: -4px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 3px;
+                    width: 72%;
+                }
+            }
+        }
+    }
+
+    &__burger {
+        cursor: pointer;
+        margin-left: 13px;
+        height: 16px;
+        @media(max-width: 1024px) {height: 22.02px;}
+        @media(max-width: 554px) {height: 16px;}
+        & img {
+            object-fit: cover;
+            height: 100%;
+        }
+    }
+}

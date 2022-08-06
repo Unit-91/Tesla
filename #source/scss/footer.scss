@@ -1,0 +1,246 @@
+.footer {
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 100%;
+    color: #FFFFFF;
+
+    &__row {
+        display: flex;
+        @media(max-width: 1195px) {
+            flex-direction: column;
+        }
+    }
+
+    &__text {
+        flex: 0 0 auto;
+        background-color: #E51937;
+        padding: 51px 55px 60px 56px;
+        @media(max-width: 1195px) {
+            padding: 63px 35px 64px 35px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @media(max-width: 554px) {padding: 18px 29px;}
+    }
+
+    &__protection {
+        @media(max-width: 1195px) {
+            max-width: 1000px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            max-height: 305px;
+        }
+        @media(max-width: 554px) {max-height: 100%;}
+    }
+
+    &__the-safest {
+        margin-bottom: 60px;
+        @media(max-width: 1195px) {margin-right: 60px;}
+        @media(max-width: 736px) {
+            max-width: 100%;
+            margin-right: 0px;
+        }
+        @media(max-width: 360px) {margin-bottom: 10%;}
+    }
+
+    &__protection-title {
+        line-height: 37px;
+        margin-bottom: 13px;
+    }
+
+    &__protection-text {
+    }
+
+    &__rating {
+        flex: 0 0 auto;
+        margin-bottom: 90px;
+        @media(max-width: 768px) {padding-right: 20px;}
+        @media(max-width: 758px) {padding-right: 0px;}
+        @media(max-width: 736px) {display: none;}
+
+        &-title {
+            font-weight: 600;
+            font-size: 30px;
+            color: #FFFFFF;
+            margin-bottom: 29px;
+        }
+        &-row {
+            display: flex;
+        }
+        &-lines {
+            padding-top: 4px;
+            margin-right: 35px;
+        }
+        &-line {
+            font-weight: bold;
+            font-size: 17px;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+            & span {
+                padding-left: 3px;
+                font-size: 12px;
+                font-weight: normal;
+            }
+        }
+        &-stars {
+            
+        }  
+    }
+
+    &__stars-line {
+        margin-bottom: 14px;
+    }
+
+    &__five {
+        position: relative;
+        padding-left: 95px;
+        margin-bottom: 63px;
+        @media(max-width: 1195px) {display: none;}
+        &:before {
+            position: absolute;
+            content: '';
+            top: 4px;
+            left: 10px;
+            width: 62px;
+            height: 74px;
+            background-image: url('../img/icons/shield.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__five-title {
+        font-weight: 600;
+        font-size: 50px;
+        color: #FFFFFF;
+    }
+
+    &__five-subtitle {
+        font-weight: 600;
+        font-size: 25px;
+        color: #FFFFFF;
+    }
+
+    &__order {
+        @media(max-width: 554px) {display: none;}
+    }
+
+    &__learn-more {
+        padding-left: 12px;
+        &:before {
+            left: -18px !important;
+        }
+    }
+
+    &__order-btn {
+    }
+
+    &__img {
+        position: relative;
+        width: 100%;
+        padding-top: 12.15%;
+        @media(max-width: 1195px) {padding-bottom: 57.9%;}
+        @media(max-width: 554px) {padding-bottom: 66.2%;}
+        &:before {
+            position: absolute;
+            content: '';
+            top: 15.8%;
+            left: 20.5%;
+            width: 79.5%;
+            height: 20%;
+            background-image: url('../img/model-s.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            @media(max-width: 1195px) {
+                top: 13%;
+                left: 12.42%;
+                width: 100%;
+                height: 20.76%;
+            }
+            @media(max-width: 554px) {
+                top: 16%;
+                left: 0.3%;
+                width: 105.7%;
+                height: 35%;
+            }
+        }
+        &:after {
+            position: absolute;
+            content: '';
+            top: 19.6%;
+            left: -9.5%;
+            width: 110%;
+            height: 70%;
+            background-image: url('../img/tesla-skelet.svg');
+            background-repeat: no-repeat;
+            @media(max-width: 1195px) {
+                top: 14.91%;
+                left: -2.15%;
+                width: 100%;
+                height: 78%;
+                background-size: contain;
+            }
+            @media(max-width: 554px) {
+                top: 20%;
+                left: -0.7%;
+                height: 69%;
+            }
+        }
+    }
+
+    &__front-protection {
+        z-index: 1;
+        position: absolute;
+        max-width: 9em;
+        top: 24.6%;
+        left: 188px;
+        color: #000000;
+        @media(max-width: 1400px) {left: 209px;}
+        @media(max-width: 1195px) {
+            top: 21.1%;
+            left: 24.2%;
+        }
+        @media(max-width: 768px) {max-width: 8em;}
+        @media(max-width: 554px) {
+            top: 25.7%;
+            left: 25.4%;
+        }
+    }
+    &__side-protection {
+        position: absolute;
+        max-width: 9em;
+        top: 19.3%;
+        left: 464px;
+        color: #000000;
+        @media(max-width: 1400px) {left: 485px;}
+        @media(max-width: 1195px) {
+            top: 14.8%;
+            left: 50%;
+        }
+        @media(max-width: 768px) {max-width: 8em;}
+        @media(max-width: 554px) {
+            top: 20.15%;
+            left: 50.7%;
+        }
+    }
+    &__minimal-risk {
+        z-index: 1;
+        position: absolute;
+        max-width: 14em;
+        top: 75.5%;
+        left: 520px;
+        color: #000000;
+        @media(max-width: 1400px) {left: 541px;}
+        @media(max-width: 1195px) {
+            max-width: 12em;
+            top: 78.6%;
+            left: 56.5%;
+        }
+        @media(max-width: 554px) {
+            top: 79.7%;
+            left: 56%;
+        }
+    }
+}
